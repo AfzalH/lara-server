@@ -8,8 +8,7 @@ apt-get -y install gcc curl gzip sqlite3 git tar software-properties-common ngin
 ```
 ### Clone git repo
 ```bash
-git clone https://github.com/AfzalH/lara-server.git
-cd lara-server
+git clone https://github.com/AfzalH/lara-server.git && cd lara-server
 ```
 
 ### Create a site: Enter domain
