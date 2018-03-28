@@ -17,7 +17,7 @@ cd lara-server
 echo 'Enter Site Domain [site.com]:' && read site_com
 ```
 
-### Change config
+...And Change config
 ```bash
 cp nginx/srizon.com /etc/nginx/sites-available/$site_com
 sed -i "s/srizon.com/${site_com}/g" /etc/nginx/sites-available/$site_com
