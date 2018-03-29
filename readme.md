@@ -57,6 +57,15 @@ cd /var/www/$site_com
 
 Now clone your project. Create database and connect on .env
 
+### Creating database
+`replace dbname, username and password before copy-pasting`
+
+```bash
+mysql -u root -p
+CREATE DATABASE dbname;
+GRANT ALL ON dbname.* TO username@localhost IDENTIFIED BY 'password';
+exit;
+```
 ### https
 ```bash
 certbot --nginx
