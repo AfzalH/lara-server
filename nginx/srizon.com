@@ -1,6 +1,5 @@
 server {
     listen 80;
-    listen [::]:80 ipv6only=on;
     root /var/www/srizon.com/public;
     index index.php index.html index.htm;
     server_name srizon.com   www.srizon.com;
