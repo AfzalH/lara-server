@@ -10,6 +10,16 @@ apt-get update
 apt-get -y install gcc curl gzip sqlite3 git tar software-properties-common nginx php7.2-fpm php7.2-xml php7.2-bz2  php7.2-zip php7.2-mysql php7.2-intl php7.2-gd php7.2-curl php7.2-soap php7.2-mbstring python-certbot-nginx mariadb-server
 #
 ```
+### Configure PHP
+```bash
+sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 20M/g' /etc/php/7.2/fpm/php.ini
+sed -i 's/max_execution_time = 30/max_execution_time = 300/g' /etc/php/7.2/fpm/php.ini
+sed -i 's/max_input_time = 60/max_input_time = 300/g' /etc/php/7.2/fpm/php.ini
+sed -i 's/post_max_size = 8M/post_max_size = 28M/g' /etc/php/7.2/fpm/php.ini
+sed -i 's/memory_limit = 128M/memory_limit = 512M/g' /etc/php/7.2/fpm/php.ini
+service php7.2-fpm restart
+#
+```
 ### Clone git repo
 ```bash
 git clone https://github.com/AfzalH/lara-server.git && cd lara-server
