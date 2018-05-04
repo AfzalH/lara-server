@@ -24,7 +24,7 @@ server {
         application/xml
         application/xml+rss;
     location / {
-        try_files $uri $uri/ /index.php?\$query_string;
+        try_files $uri $uri/ /index.php?$args;
     }
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
