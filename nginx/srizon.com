@@ -1,5 +1,8 @@
 server {
     listen 80;
+    #if ($http_x_forwarded_proto != 'https') {
+    #    return 301 https://$host$request_uri;
+    #}
     root /var/www/srizon.com/public;
     index index.php index.html index.htm;
     server_name srizon.com   www.srizon.com;
