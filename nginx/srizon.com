@@ -1,5 +1,6 @@
 server {
     listen 80;
+    #load balancer forwarded https
     #if ($http_x_forwarded_proto != 'https') {
     #    return 301 https://$host$request_uri;
     #}
@@ -26,6 +27,10 @@ server {
         application/json
         application/xml
         application/xml+rss;
+    #static single page app on /app directory
+    #location /app {
+    #    try_files $uri $uri/ /app/index.html?$args;
+    #}
     location / {
         try_files $uri $uri/ /index.php?$args;
     }
