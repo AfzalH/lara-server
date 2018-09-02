@@ -22,11 +22,12 @@ service php7.2-fpm restart
 ```
 ### Clone git repo
 ```bash
-git clone https://github.com/AfzalH/lara-server.git && cd lara-server
+git clone https://github.com/AfzalH/lara-server.git
 ```
 
 ### Create a site: Enter domain
 ```bash
+cd lara-server
 echo 'Enter Site Domain [site.com]:' && read site_com
 ```
 
