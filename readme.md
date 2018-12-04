@@ -10,6 +10,11 @@ apt-get update
 apt-get -y install gcc curl gzip sqlite3 git tar software-properties-common nginx php7.2-fpm php7.2-xml php7.2-bz2  php7.2-zip php7.2-mysql php7.2-intl php7.2-gd php7.2-curl php7.2-soap php7.2-mbstring python-certbot-nginx composer mariadb-server
 #
 ```
+## Optional Package for Image Optimization
+These are used by *Laravel Media Library* package. So if you're using that, install these.
+```bash
+apt-get -y install jpegoptim optipng pngquant gifsicle
+```
 ### Configure PHP
 ```bash
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 20M/g' /etc/php/7.2/fpm/php.ini
