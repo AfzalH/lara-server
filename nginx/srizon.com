@@ -8,7 +8,7 @@ server {
     index index.php index.html index.htm;
     server_name srizon.com   www.srizon.com;
     charset   utf-8;
-    client_max_body_size 20M;
+    client_max_body_size 120M;
     gzip on;
     gzip_vary on;
     gzip_disable "msie6";
